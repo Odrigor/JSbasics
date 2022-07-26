@@ -1,0 +1,47 @@
+si lo vemos como un CRUD de HTML desde JS, los elementos importantes son:
+
+
+const items = document.querySelectoAll('li');
+nos trae el arreglo de todo lo que sea li
+o podemos ir a un bloque en escpecifico con su id, o clase con
+querySelector('#item'); o '.item' en caso de que sea una clase
+
+
+para crear un elemento HTML desde js podemos usar
+
+const checkBox= document.createElement('INPUT'); //creamos los elementos html
+const item = document.createElement('li');
+
+createElement('aqui va la etiqueta HTML');
+
+
+Read, para traer un elemento que haya sido puesto en algun input 
+
+let a = document.querySelector('#item').value;
+
+con eso estamos guardando en el a el valor, de lo que tenga el inputo item
+
+Update
+
+ya sea creando o trayendo un elemento html, podemos actualizar su contenido texto
+como sus atributos con
+item = document.createElement('li');
+
+
+checkBox.setAttribute('type','checkBox');
+item.setAttribute('data-id', Date.now() ); // data id para el li
+item.innerText=(`${a}`);//el texto
+
+ademas si queremos anidar html, podemos usar
+
+listaItems.appendChild(item);
+
+appendChild(nuevoHTML);
+
+
+
+
+y para Eliminar
+
+podemos usar    
+nuevoHTML.remove();
